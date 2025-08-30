@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+node_modules/.tmp
+
+# Build
+dist
+dist-ssr
+coverage
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─────────────────────────────────────────────────────────────
+
+# temporary playgrounds
+src/**/dev/
+
+# dev notes
+*.dev.ts
+*.dev.tsx
+
+# just in case
+.eslintcache
+.npmrc
+.turbo
+.vercel

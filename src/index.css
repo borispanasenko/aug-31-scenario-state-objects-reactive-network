@@ -1,0 +1,159 @@
+/* index.css — Tailwind-first */
+@import "tailwindcss";
+
+/* Цветовые токены под единый стиль (светлая тема по умолчанию) */
+:root {
+  --bg: 255 255 255;      /* белый */
+  --bg-2: 248 250 252;    /* slate-50/blue-50-like */
+  --fg: 17 24 39;         /* gray-900 */
+  --muted: 107 114 128;   /* gray-500 */
+  --primary: 37 99 235;   /* blue-600 */
+  --info-50: 239 246 255; /* blue-50 */
+  --info-800: 30 64 175;  /* blue-800 */
+  --info-900: 30 58 138;  /* blue-900 */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply antialiased;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+  margin: 0;
+}
+
+/* Удобные «семантические» Tailwind-слои для консистентности */
+@layer components {
+  .card {
+    @apply rounded-lg bg-white p-6 shadow-lg;
+  }
+
+  .section-title {
+    @apply mb-4 text-xl font-semibold text-gray-700;
+  }
+
+  .muted {
+    color: rgb(var(--muted));
+  }
+
+  .text-primary {
+    color: rgb(var(--primary));
+  }
+
+  .bg-surface {
+    background-color: rgb(var(--bg));
+  }
+
+  .bg-surface-2 {
+    background-color: rgb(var(--bg-2));
+  }
+
+  .text-foreground {
+    color: rgb(var(--fg));
+  }
+
+  .text-muted {
+    color: rgb(var(--muted));
+  }
+
+  .bg-info-50 {
+    background-color: rgb(var(--info-50));
+  }
+  .text-info-800 {
+    color: rgb(var(--info-800));
+  }
+  .text-info-900 {
+    color: rgb(var(--info-900));
+  }
+
+  /* Кнопки — без глобального переопределения native button; только классы .btn */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .btn-success {
+    @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+  }
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+  .btn-neutral {
+    @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+  }
+  .btn-neutral-ghost {
+    @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-400;
+  }
+}
+
+/* Никаких глобальных .logo, .card (с пересечением), анимаций логотипа и т.п. */
+
+
+/*:root {*/
+/*  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+/*  line-height: 1.5;*/
+/*  font-weight: 400;*/
+
+/*  color-scheme: light dark;*/
+/*  color: rgba(255, 255, 255, 0.87);*/
+/*  background-color: #242424;*/
+
+/*  font-synthesis: none;*/
+/*  text-rendering: optimizeLegibility;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+/*a {*/
+/*  font-weight: 500;*/
+/*  color: #646cff;*/
+/*  text-decoration: inherit;*/
+/*}*/
+/*a:hover {*/
+/*  color: #535bf2;*/
+/*}*/
+
+/*body {*/
+/*  margin: 0;*/
+/*  display: flex;*/
+/*  place-items: center;*/
+/*  min-width: 320px;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+/*h1 {*/
+/*  font-size: 3.2em;*/
+/*  line-height: 1.1;*/
+/*}*/
+
+/*button {*/
+/*  border-radius: 8px;*/
+/*  border: 1px solid transparent;*/
+/*  padding: 0.6em 1.2em;*/
+/*  font-size: 1em;*/
+/*  font-weight: 500;*/
+/*  font-family: inherit;*/
+/*  background-color: #1a1a1a;*/
+/*  cursor: pointer;*/
+/*  transition: border-color 0.25s;*/
+/*}*/
+/*button:hover {*/
+/*  border-color: #646cff;*/
+/*}*/
+/*button:focus,*/
+/*button:focus-visible {*/
+/*  outline: 4px auto -webkit-focus-ring-color;*/
+/*}*/
+
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    color: #213547;*/
+/*    background-color: #ffffff;*/
+/*  }*/
+/*  a:hover {*/
+/*    color: #747bff;*/
+/*  }*/
+/*  button {*/
+/*    background-color: #f9f9f9;*/
+/*  }*/
+/*}*/
